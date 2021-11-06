@@ -3,12 +3,10 @@
 Simple downloader for www.soundtrap.com.
 
 ## Features
-- Downloading a project or a folder in WAV, MP3 or OGG from Soundtrap.
-- Conversion to FLAC with C2F and DAC -options in config.json.
-- Tags for FLAC and MP3.
-
-## Supported Operating Systems
-- Windows
+- Downloads WAV, MP3 and OGG from Soundtrap
+- [Conversion to FLAC](https://github.com/wwwwawww/soundtap/wiki/Conversion-to-FLAC)
+- [Tags for FLAC and MP3](https://github.com/wwwwawww/soundtap/wiki/Tags)
 
 ## Installation
 1. Install Python from python.org, depencies with pip, ffmpeg from ffmpeg.org
+2. [Getting session key](https://github.com/wwwwawww/soundtap/wiki/Getting-session-key)
