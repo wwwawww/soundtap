@@ -147,9 +147,9 @@ def downloadFolder(psid):
             #dlpath = dlpath + projectstitle + "/"
             print("Downloading folder '" + projectstitle + "' [" + str(psid) + "]...")
             while pjscounter < nop:
+                psinfo_pr = (psinfo_ids[pjscounter])
                 downloadProject(psinfo_pr)
                 pjscounter += int(1)
-                psinfo_pr = (psinfo_ids[pjscounter])
         except IndexError:
             print("This folder doesn't exist or is empty.")
     else:
