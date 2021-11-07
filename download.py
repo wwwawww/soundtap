@@ -109,25 +109,26 @@ def downloadProject(id):
                 #audio["key"] = key
                 audio.save(dlpath + "/" + ftitle + ".mp3",v1=0)
                 # Automated conversion to FLAC
-            if c2f == "y":
-                song = AudioSegment.from_wav(dlpath + "/" + ftitle + ".wav")
-                if os.path.isfile(dlpath + "/" + ftitle + ".flac"):
-                    print("This project is already downloaded.")
-                else:
-                    song.export(dlpath + "/" + ftitle + ".flac", format="flac")
-                    # FLAC Tags
-                    audio = FLAC(dlpath + "/" + ftitle + ".flac")
-                    audio["title"] = title
-                    audio["artist"] = artist
-                    audio["genre"] = genre
-                    audio["year"] = year
-                    audio["copyright"] = artist
-                    audio["bpm"] = bpm
-                    audio["key"] = key
-                    audio.save()
-                    # Remove WAV after conversion
-                    if dac == "y":
-                        os.remove(dlpath + "/" + ftitle + ".wav")
+            if format == "wav":
+                if c2f == "y":
+                    song = AudioSegment.from_wav(dlpath + "/" + ftitle + ".wav")
+                    if os.path.isfile(dlpath + "/" + ftitle + ".flac"):
+                        print("This project is already downloaded.")
+                    else:
+                        song.export(dlpath + "/" + ftitle + ".flac", format="flac")
+                        # FLAC Tags
+                        audio = FLAC(dlpath + "/" + ftitle + ".flac")
+                        audio["title"] = title
+                        audio["artist"] = artist
+                        audio["genre"] = genre
+                        audio["year"] = year
+                        audio["copyright"] = artist
+                        audio["bpm"] = bpm
+                        audio["key"] = key
+                        audio.save()
+                        # Remove WAV after conversion
+                        if dac == "y":
+                            os.remove(dlpath + "/" + ftitle + ".wav")
 
 # Projects
 def downloadFolder(psid):
