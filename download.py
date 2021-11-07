@@ -34,9 +34,13 @@ with open(path + "/config.json") as f:
     dac = (config["dac"])
 
 def instatus():
-    ts = s.head("https://www.soundtrap.com/api/conversation/getStatus1")
-    if ts.status_code == 200:
-        print("You are logged in.")
+    apiurl = "https://www.soundtrap.com/api/user/getMe1/"
+    caniaccessit = s.head(apiurl)
+    if caniaccessit.status_code == 200:
+        rapi = s.get(apiurl)
+        me = rapi.json()
+        username = (me["username"])
+        print("You are logged in as '" + username + "'.")
     else:
         print("You aren't logged in.")
     
