@@ -1,5 +1,6 @@
 # Soundtap
 ![Logo](logo2.png)
+![Screenshot](screenshot.png)
 Simple downloader for www.soundtrap.com. Downloads WAV, MP3 and OGG with [conversion to FLAC with metadata](https://github.com/wwwawww/soundtap/wiki/Conversion-to-FLAC).
 
 <details>
@@ -8,7 +9,7 @@ Simple downloader for www.soundtrap.com. Downloads WAV, MP3 and OGG with [conver
 </details>
 <details>
  <summary>Depencies?</summary>
- Cookiejar, datetime, requests, mutagen, tqdm, pydub
+ Cookiejar, datetime, requests, mutagen, tqdm, pydub, colorama
 </details>
 
 ## Installation
