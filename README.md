@@ -1,16 +1,19 @@
 # Soundtap
-![Logo](logo2.png)
 ![Screenshot](screenshot.png)
-Simple downloader for www.soundtrap.com. Downloads WAV, MP3 and OGG with [conversion to FLAC with metadata](https://github.com/wwwawww/soundtap/wiki/Conversion-to-FLAC).
-
+Downloader for www.soundtrap.com. Downloads WAV, MP3 and OGG with [conversion to FLAC with metadata](https://github.com/wwwawww/soundtap/wiki/Conversion-to-FLAC).
 <details>
- <summary>How do I get my session key?</summary>
- Right Click -> Inspect Element -> Application/Storage -> Cookies -> Copy value of jb_SESSION to config.json
+ <summary>What is C2F?</summary>
+ C2F converts WAV to FLAC. To disable it, change "y" to "n".
 </details>
 <details>
- <summary>Depencies?</summary>
- Cookiejar, datetime, requests, mutagen, tqdm, pydub, colorama
+ <summary>What is DAC?</summary>
+ DAC deletes WAV after conversion. To disable it, change "y" to "n".
+</details>
+<details>
+ <summary>What is DIF?</summary>
+ DIF deletes invalid files. To disable it, change "y" to "n".
 </details>
 
 ## Installation
-1. Install Python from python.org, depencies with pip, ffmpeg from ffmpeg.org
+1. Install [Python](https://python.org), [depencies](https://raw.githubusercontent.com/wwwawww/soundtap/main/requirements.txt) with pip and [ffmpeg](https://ffmpeg.org)
+2. Browser -> Right Click -> Inspect Element -> Application/Storage -> Cookies -> Copy value of jb_SESSION to config.json
